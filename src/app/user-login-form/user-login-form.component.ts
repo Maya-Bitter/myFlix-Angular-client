@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 // You'll use this import to close the dialog on success
 import { MatDialogRef } from '@angular/material/dialog';
 
-import { Router } from '@angular/router';
+//import { Router } from '@angular/router';
 
 // This import brings in the API calls we created in 6.2
 import { FetchApiDataService } from '../fetch-api-data.service';
@@ -21,9 +21,9 @@ export class UserLoginFormComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
-    public snackBar: MatSnackBar,
-    private router: Router
-  ) {}
+    public snackBar: MatSnackBar
+  ) //private router: Router
+  {}
 
   ngOnInit(): void {}
 
@@ -35,7 +35,7 @@ export class UserLoginFormComponent implements OnInit {
         localStorage.setItem('user', JSON.stringify(result.user));
         localStorage.setItem('token', result.token);
         this.dialogRef.close(); // This will close the modal on success!
-        this.router.navigate(['movies']);
+        //this.router.navigate(['movies']);
         this.snackBar.open('Logged in', 'OK', {
           duration: 2000,
         });
