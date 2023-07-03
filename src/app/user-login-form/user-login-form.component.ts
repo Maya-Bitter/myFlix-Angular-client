@@ -21,9 +21,8 @@ export class UserLoginFormComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
-    public snackBar: MatSnackBar
-  ) //private router: Router
-  {}
+    public snackBar: MatSnackBar //private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
@@ -36,7 +35,7 @@ export class UserLoginFormComponent implements OnInit {
         localStorage.setItem('token', result.token);
         this.dialogRef.close(); // This will close the modal on success!
         //this.router.navigate(['movies']);
-        this.snackBar.open('Logged in', 'OK', {
+        this.snackBar.open('User login successfuly', 'OK', {
           duration: 2000,
         });
       },
