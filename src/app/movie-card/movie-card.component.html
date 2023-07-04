@@ -1,9 +1,14 @@
+<mat-toolbar color="primary">
+  <h1><span>My Flix App</span></h1>
+</mat-toolbar>
 <div style="display: flex">
   <mat-card *ngFor="let movie of movies" style="flex: 1 1 auto">
     <mat-card-header>
-      <mat-card-title>{{ movie.Title }}</mat-card-title>
+      <mat-card-title
+        ><h2>{{ movie.Title }}</h2></mat-card-title
+      >
       <mat-card-subtitle
-        >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
+        ><h3>Directed by: {{ movie.Director.Name }}</h3></mat-card-subtitle
       >
     </mat-card-header>
     <img src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
