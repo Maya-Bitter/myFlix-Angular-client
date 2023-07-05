@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatListModule } from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     MatSnackBarModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
