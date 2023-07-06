@@ -65,7 +65,7 @@ As a user, I want to be able to receive information on movies, directors, and ge
 can learn more about movies I’ve watched or am interested in.___
 
 ___User story:
-As a user, I want to be able to create a profile so I can save data about my favorite movies..___
+As a user, I want to be able to create a profile so I can save data about my favorite movies.___
 
 [go to start](#Contents)
 
