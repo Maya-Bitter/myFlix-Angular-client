@@ -60,6 +60,15 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * This method will edit the user data from the API
+   * @param void
+   * @returns user object
+   * @memberof UserProfileComponent
+   * @see FetchApiDataService.editUser()
+   * @example editUser()
+   */
+
   editUser(): void {
     this.fetchApiData.editUser(this.userData).subscribe(
       (result) => {
@@ -76,6 +85,15 @@ export class UserProfileComponent implements OnInit {
       }
     );
   }
+
+  /**
+   * This method will delete the user data from the API
+   * @param void
+   * @returns user object
+   * @memberof UserProfileComponent
+   * @see FetchApiDataService.deleteUser()
+   * @example deleteUser()
+   */
 
   deleteUser(): void {
     this.fetchApiData.deleteUser().subscribe(

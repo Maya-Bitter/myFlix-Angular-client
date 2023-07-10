@@ -21,6 +21,10 @@ export class MovieCardComponent {
     this.getMovies();
   }
 
+  /**
+   * Gets all movies from the API
+   * @returns void
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -29,6 +33,12 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * Gets the genre
+   * @param name
+   * @param description
+   * @returns void
+   */
   openGenre(name: string, description: string): void {
     this.dialog.open(MovieInfoComponent, {
       data: {
@@ -39,6 +49,14 @@ export class MovieCardComponent {
       width: '280px',
     });
   }
+
+  /**
+   * Gets the director name and bio
+   * @param name
+   * @param bio
+   * @returns void
+   */
+
   openDirector(name: string, bio: string): void {
     this.dialog.open(MovieInfoComponent, {
       data: {
@@ -48,6 +66,14 @@ export class MovieCardComponent {
       width: '280px',
     });
   }
+
+  /**
+   * Gets the novie's description
+   * @param Synopsis
+   * @param description
+   * @returns void
+   */
+
   openSynopsis(description: string): void {
     this.dialog.open(MovieInfoComponent, {
       data: {
@@ -58,6 +84,12 @@ export class MovieCardComponent {
       width: '280px',
     });
   }
+
+  /**
+   * Add movie to favourites
+   * @returns void
+   */
+
   addFavorite(id: string): void {
     this.fetchApiData.addFavoriteMovie(id).subscribe((result) => {
       this.snackBar.open('Movie added to favorites.', 'OK', {
@@ -69,6 +101,11 @@ export class MovieCardComponent {
   isFavorite(id: string): boolean {
     return this.fetchApiData.isFavoriteMovie(id);
   }
+
+  /**
+   * remove movie to favourites
+   * @returns void
+   */
 
   removeFavorite(id: string): void {
     this.fetchApiData.deleteFavoriteMovie(id).subscribe((result) => {
